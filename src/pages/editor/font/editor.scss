@@ -1,0 +1,36 @@
+#font-editor {
+	.appbody {
+		padding: 20px;
+
+		.editor-item {
+			display: flex;
+			padding: 10px 0;
+
+			.input-area {
+				flex: 1;
+
+				.file-name {
+					user-select: none;
+
+					span {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.label {
+				width: 90px;
+				user-select: none;
+
+				&::after {
+					content: ':';
+				}
+			}
+
+			.error {
+				font-size: .8em;
+			}
+		}
+
+	}
+}

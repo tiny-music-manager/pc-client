@@ -1,0 +1,35 @@
+.tmm-filter {
+	margin: 30px 40px 0 40px;
+	display: flex;
+	height: 30px;
+	align-items: center;
+	user-select: none;
+
+	>div {
+		margin-right: 3px;
+		cursor: pointer;
+
+		&:first-child {
+			margin-right: 20px;
+			width: 50px;
+			height: 26px;
+			border-radius: 15px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&.active {
+				cursor: default;
+			}
+		}
+
+		&:not(:first-child) {
+			padding: 0 5px;
+
+			&.active {
+				border-radius: 2px;
+				cursor: default;
+			}
+		}
+	}
+}

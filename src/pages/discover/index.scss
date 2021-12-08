@@ -1,0 +1,79 @@
+#discover-page {
+	width: 100%;
+	height: 100%;
+
+	>div {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		user-select: none;
+	}
+
+	.finding {
+		.comp-loading {
+			margin-bottom: 20px;
+			font-size: 2em;
+		}
+	}
+
+	.input-address {
+		.input-item {
+			display: flex;
+
+			input {
+				height: 35px;
+				width: 390px;
+				border: solid 1px #2196f3;
+				outline: none;
+				box-sizing: border-box;
+				padding: 0 5px;
+			}
+
+			.btn {
+				height: 35px;
+				background: #2196f3;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0 25px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.title-bar {
+		position: absolute;
+		left: 0;
+		top: 0px;
+		right: 0;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+
+		.flex {
+			height: 100%;
+			flex: 1;
+			-webkit-app-region: drag;
+		}
+
+		.close-btn {
+			width: 30px;
+			height: 30px;
+			margin-right: 5px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 1px;
+
+			&:hover {
+				background-color: #c3c3c34a;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.playing-icon {
+	display: inline-block;
+	margin-right: 5px;
+
+	>span {
+		display: inline-block;
+		width: 2px;
+		height: .7em;
+		background-color: currentColor;
+		margin-left: 2px;
+		border-radius: 1px;
+		animation: playing-anim .5s linear infinite alternate;
+
+		&:nth-child(1) {
+			animation-delay: 0s;
+		}
+
+		&:nth-child(2) {
+			animation-delay: .5s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: .3s;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+#manage-music-page {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	.music-tab {
+		padding: 0 40px;
+	}
+
+	//通用的标题栏
+	.title-bar {
+		display: flex;
+		align-items: center;
+		padding-right: 20px;
+
+		.search-bar {
+			display: flex;
+			align-items: center;
+			flex: 1;
+
+			.input {
+				height: 35px;
+			}
+
+			.button {
+				height: 35px;
+				box-sizing: border-box;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.tiptxt {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

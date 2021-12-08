@@ -1,0 +1,205 @@
+#manage-music-page {
+
+	@keyframes upload-drop-anim {
+		0% {
+			// background-color: #b3b3b347;
+			border: solid 1px transparent;
+			opacity: .3;
+		}
+
+		100% {
+			border: solid 3px currentColor;
+			opacity: .4;
+		}
+	}
+
+	.manage-upload {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		padding: 10px 0 0 40px;
+		position: relative;
+
+		.content {
+			margin-top: 5px;
+			flex: 1 1;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+
+			.music-list {
+				flex: 1;
+				overflow: auto;
+			}
+
+			.music-line {
+				display: flex;
+				align-items: center;
+				height: 32px;
+				padding: 3px 0;
+				overflow: hidden;
+				transition: all .2s;
+				// padding-right: 10px;
+
+				&.title {
+					color: #a6a6a6a8;
+					user-select: none;
+					padding-right: 3px;
+				}
+
+				&:not(.title):hover {
+					background: #b3b3b32e;
+				}
+
+				>div {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					padding-right: 5px;
+					box-sizing: border-box;
+				}
+
+				.pic {
+					width: 40px;
+
+					>div {
+						width: 32px;
+						height: 32px;
+						background-repeat: no-repeat;
+						background-size: cover;
+					}
+				}
+
+				.name {
+					flex: 3;
+				}
+
+				.artist {
+					flex: 2;
+				}
+
+				.album {
+					flex: 2;
+				}
+
+				.kind {
+					flex: 2;
+
+					span {
+						// font-size: .8em;
+						user-select: none;
+						cursor: pointer;
+					}
+				}
+
+				.duration {
+					width: 60px;
+				}
+
+				.btns {
+					width: 80px;
+					user-select: none;
+					cursor: default;
+
+					>span {
+
+						&:not(:last-child) {
+							margin-right: 5px;
+							font-size: 1.1em;
+						}
+					}
+
+					svg {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		.drag-area {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: #79797945;
+			animation: upload-drop-anim .5s linear infinite alternate;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2.5em;
+			user-select: none;
+			text-shadow: 0px 0px 9px #818181;
+			font-weight: bold;
+		}
+	}
+}
+
+.popover .dialog>.dialog-body {
+	.replace-info {
+		display: flex;
+		margin-top: 20px;
+
+		.replaced {
+			flex: 1;
+			overflow: hidden;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.switch-icon {
+			display: flex;
+			align-items: center;
+			padding: 0 20px;
+			font-size: 1.3em;
+		}
+
+		.current {
+			display: flex;
+			align-items: center;
+			padding: 0 0 0 20px;
+
+			.singer-item {
+				margin-right: 0;
+				cursor: default;
+			}
+		}
+
+		.singer-item {
+			display: flex;
+			align-content: center;
+			user-select: none;
+			margin: 2px 10px;
+			border: solid 1px #8181814a;
+			padding: 4px 14px;
+			cursor: pointer;
+			transition: all .2s;
+
+			.name {
+				display: flex;
+				align-items: center;
+				font-size: .9em;
+			}
+
+			.avatar {
+				width: 28px;
+				height: 28px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				margin-right: 5px;
+				border-radius: 14px;
+			}
+
+			.similar {
+				display: flex;
+				font-size: .8em;
+				align-items: center;
+				opacity: .3;
+				margin-left: 3px;
+			}
+
+		}
+	}
+}

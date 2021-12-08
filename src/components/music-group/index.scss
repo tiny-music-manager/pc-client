@@ -1,0 +1,94 @@
+.music-group {
+	margin: 30px 40px 0 40px;
+
+	.group-title {
+		font-size: 18px;
+		user-select: none;
+	}
+
+	.group-container {
+		margin-top: 10px;
+		position: relative;
+
+		.scroll-left,
+		.scroll-right {
+			position: absolute;
+			font-size: 2.5em;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				opacity: .3;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		.scroll-left {
+			left: -1em;
+		}
+
+		.scroll-right {
+			right: -1em;
+		}
+
+		.group-content {
+			position: relative;
+			overflow: hidden;
+
+			// 左右滑动
+			&.mode-scroll {
+				>div {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					transition: all .3s;
+					overflow: hidden;
+				}
+			}
+		}
+
+		// 行
+		.musig-group-row {
+			display: flex;
+
+			.music-group-item {
+				user-select: none;
+				overflow: hidden;
+
+				.music-group-item-image {
+					width: 100%;
+					height: auto;
+					background-repeat: no-repeat;
+					background-size: cover;
+					font-size: 4em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: white;
+					border-radius: 5px;
+					margin: 5px 0;
+					transition: transform .2s;
+					cursor: pointer;
+
+					&:hover {
+						transform: translateY(-5px);
+					}
+				}
+
+				.music-group-item-title {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+}

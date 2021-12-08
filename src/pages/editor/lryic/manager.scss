@@ -1,0 +1,132 @@
+#lyric-manager {
+	.appbody {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+
+		>div {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			overflow: hidden;
+			z-index: 2;
+			transition: all .3s;
+
+			&:not(.show) {
+				z-index: 1;
+				opacity: 0;
+				transform: translateX(100px);
+			}
+		}
+
+		.btn-area {
+			display: flex;
+			padding: 20px;
+			align-items: center;
+
+			.button,
+			.input {
+				margin-right: 10px;
+			}
+
+			.input {
+				height: 35.5px;
+			}
+		}
+
+		.lyric-list {
+			flex: 1;
+			padding: 0 0 2px 20px;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			cursor: default;
+
+			.lyric-line {
+				display: flex;
+				padding: 5px 10px;
+				align-items: center;
+
+				&.title {
+					user-select: none;
+					background: #94949426;
+					margin-right: 20px;
+					margin-bottom: 5px;
+				}
+
+				&:not(.title):hover {
+					background: #7d7d7d0a;
+				}
+
+				>div {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+
+				.done {
+					font-size: 1.18em;
+				}
+
+				.check {
+					width: 30px;
+				}
+
+				.name {
+					flex: 5;
+
+					svg {
+						margin-right: 5px;
+					}
+				}
+
+				.artist {
+					flex: 3;
+				}
+
+				.duration {
+					width: 100px;
+				}
+
+				.type {
+					width: 100px;
+
+					>div {
+						display: inline-block;
+						margin: 3px;
+						font-size: 10px;
+						background: #bcbcbc4f;
+						border-radius: 5px;
+						padding: 1px 3px;
+					}
+				}
+
+				.content {
+					flex: 9;
+				}
+
+				.websearch-remark {
+					width: 70px;
+				}
+			}
+
+			.lyric-content {
+				flex: 1;
+				padding-right: 14px;
+				overflow-y: scroll;
+			}
+		}
+
+		.loading {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2.5em;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.love-page {
+	display: flex;
+	flex-direction: column;
+
+	>.music-tab {
+		margin: 20px 40px;
+	}
+
+	.music-group-container {
+		overflow: scroll;
+		margin-right: 0;
+	}
+
+	.music-group {
+		margin-top: 0;
+	}
+
+	.music-list-table {
+		padding: 0 0 0 40px;
+		flex: 1;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.music-list-item.title-bar {
+		margin-right: 24px;
+	}
+
+	.music-list-body {
+		flex: 1;
+		overflow: scroll;
+		padding-right: 20px;
+	}
+}

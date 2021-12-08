@@ -1,0 +1,98 @@
+#root {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+
+#dlyric {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	user-select: none;
+
+	.flex {
+		flex: 1;
+	}
+
+	&.left-right {
+		>.lyric-line:nth-child(1) {
+			justify-content: flex-start;
+		}
+
+		>.lyric-line:nth-child(2) {
+			justify-content: flex-end;
+		}
+	}
+
+	&.center {
+		>.lyric-line {
+			justify-content: center;
+		}
+	}
+
+	&.single-line {
+
+		>.lyric-line {
+			justify-content: center;
+		}
+	}
+
+	>.lyric-line {
+		flex-wrap: nowrap;
+		text-shadow: 0 0 3px rgba(0, 0, 0, 0.216);
+		display: flex;
+		align-items: center;
+		padding: 5px 10px;
+		flex-wrap: wrap;
+		opacity: .9;
+
+		.item {
+			position: relative;
+			white-space: break-spaces;
+
+			>div {
+				text-shadow: none;
+				display: flex;
+				align-items: center;
+				white-space: nowrap;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 0;
+				overflow: hidden;
+			}
+		}
+	}
+
+	>.actions {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		>svg {
+			color: #8585858c;
+			font-size: 1.2em;
+			cursor: pointer;
+			opacity: 1;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.move {
+				-webkit-app-region: drag;
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.music-tab {
+	display: flex;
+	align-items: center;
+
+	.music-tab-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		// margin: 0 5px;
+		// padding: 0 10px;
+		margin-right: 24px;
+		user-select: none;
+		cursor: pointer;
+
+		.music-tab-active {
+			margin-top: 5px;
+			width: 30px;
+			height: 4px;
+			border-radius: 2px;
+			opacity: 0;
+		}
+
+		&.active {
+			.music-tab-active {
+				opacity: 1;
+			}
+		}
+	}
+}

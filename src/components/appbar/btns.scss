@@ -1,0 +1,22 @@
+// 窗口操作
+.appbar-btns {
+	display: flex;
+	align-items: center;
+	padding-right: 6px;
+	user-select: none;
+
+	>div {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		margin: 0 3px;
+		border-radius: 2px;
+
+		&:hover {
+			background: #a1a1a140;
+		}
+	}
+}

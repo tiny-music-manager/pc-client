@@ -1,0 +1,77 @@
+#manage-music-page {
+
+	.manage-font {
+		padding: 10px 0 0 40px;
+		flex: 1;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		.button-area {
+			>div {
+				margin-right: 10px;
+			}
+		}
+
+		.body {
+			flex: 1;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+
+			.font-container {
+				overflow: scroll;
+				flex: 1;
+			}
+
+			.font-line {
+				display: flex;
+				padding: 5px 10px;
+				cursor: default;
+				margin-right: 20px;
+
+				.text {
+					width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+				>div {
+					display: flex;
+					align-items: center;
+					overflow: hidden;
+					padding-right: 10px;
+				}
+
+				&.head {
+					background: #88888826;
+					margin-top: 20px;
+					user-select: none;
+				}
+
+				&:not(.head) {
+					font-size: .9em;
+					transition: all .1s;
+					line-height: 28px;
+
+					&:hover {
+						background: #7d7d7d14;
+					}
+				}
+
+				.check {
+					width: 16px;
+				}
+
+				.name {
+					flex: 1;
+				}
+
+				.preview {
+					flex: 3;
+				}
+			}
+		}
+	}
+}

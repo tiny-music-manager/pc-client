@@ -1,0 +1,15 @@
+@keyframes amin-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.comp-loading {
+	>svg {
+		animation: amin-rotate 3s linear 2s infinite normal;
+	}
+}

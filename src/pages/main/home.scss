@@ -1,0 +1,256 @@
+@import "../../styles/consts.scss";
+
+.MainPage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	transition: $ThemeTransition;
+
+	>.left {
+		display: flex;
+		flex-direction: column;
+		align-self: flex-start;
+		width: $LeftWidth;
+		height: 100%;
+		transition: $ThemeTransition;
+		padding-left: 20px;
+		box-sizing: border-box;
+
+		.logo {
+			height: $WindowTitleHeight;
+			display: flex;
+			align-items: center;
+			user-select: none;
+
+			svg {
+				margin-right: 24px;
+				font-size: 2.4em;
+			}
+
+			div {
+				font-size: 22px;
+				font-weight: bold;
+			}
+		}
+
+		.group {
+			margin-top: 32px;
+			user-select: none;
+
+			>div {
+				padding-right: 20px;
+			}
+
+			&.flexed {
+				flex: 1 1;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				justify-self: flex-start;
+
+				>div:nth-child(2) {
+					flex: 1;
+					overflow: scroll;
+					padding-right: 14px;
+				}
+			}
+
+			//分组名称
+			>div:first-child {
+				font-size: .85em;
+				transition: all .2s;
+				line-height: 48px;
+			}
+
+			//分组内容
+			>div:last-child {
+
+				// 分组项
+				>div {
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					padding: 0 10px;
+					height: 40px;
+					margin: 4px 0;
+					// transition: all .1s;
+
+					&.actived {
+						border-radius: 3px;
+					}
+
+					>svg {
+						fill: currentColor;
+						margin-right: 8px;
+					}
+
+					>div {
+						flex: 1;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+	}
+
+	>.right {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+
+		>.title {
+			height: $WindowTitleHeight;
+			display: flex;
+			align-items: center;
+			padding: 0 10px 0 20px;
+
+			//导航
+			.navigate {
+				width: 32px;
+				height: 32px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				user-select: none;
+				margin-right: 5px;
+
+				&.disabled {
+					opacity: .3;
+					cursor: default;
+				}
+			}
+
+			//搜索
+			.search {
+				padding: 0 20px;
+
+				form {
+					height: 32px;
+					display: flex;
+					align-items: center;
+					background: #d3d3d369;
+					width: 230px;
+					overflow: hidden;
+					padding: 4px 11px;
+					box-sizing: border-box;
+					border-radius: 16px;
+
+					button {
+						padding: 0;
+						margin: 0;
+						background: transparent;
+						border: 0;
+						font-size: 1em;
+						border: 0;
+						outline: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: currentColor;
+					}
+
+					input {
+						flex: 1;
+						min-width: 0 !important;
+						background: transparent;
+						border: 0;
+						outline: 0;
+						color: currentColor;
+
+						&::placeholder {
+							color: currentColor;
+						}
+					}
+
+					svg {
+						margin-left: 5px;
+						cursor: pointer;
+					}
+				}
+			}
+
+			.flexed {
+				height: 100%;
+				flex: 1;
+			}
+
+			// 用户
+			.user {
+				display: flex;
+				align-items: center;
+				padding: 0 20px;
+				user-select: none;
+
+				.avatar {
+					-webkit-user-drag: none;
+					background: #ccc;
+					width: 32px;
+					height: 32px;
+					border-radius: 16px;
+					cursor: default;
+				}
+
+				.name {
+					margin-left: 10px;
+					cursor: pointer;
+					opacity: .5;
+
+					>div {
+						max-width: 93px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+
+		>.content {
+			flex: 1;
+			overflow: hidden;
+
+			>div {
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				padding-top: 20px;
+				box-sizing: border-box;
+			}
+
+			.page-title {
+				font-size: 32px;
+				font-weight: bold;
+				user-select: none;
+				padding: 0 40px;
+			}
+		}
+	}
+}
+
+.popover {
+
+	.dialog-body {
+		.music-details {
+			.music-detail-item {
+				display: flex;
+				padding: 5px 0;
+
+				>:first-child {
+					width: 80px;
+					user-select: none;
+
+					&::after {
+						content: ':';
+					}
+				}
+			}
+		}
+	}
+}

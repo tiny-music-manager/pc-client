@@ -1,0 +1,96 @@
+#manage-music-page {
+	.manage-music {
+		padding: 10px 0 0 40px;
+		flex: 1;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		.body {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+
+			.music-container {
+				overflow: scroll;
+				flex: 1;
+			}
+
+			.music-line {
+				display: flex;
+				padding: 5px 10px;
+				cursor: default;
+				margin-right: 20px;
+
+				.text {
+					width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+				>div {
+					display: flex;
+					align-items: center;
+					overflow: hidden;
+					padding-right: 10px;
+				}
+
+				&.head {
+					background: #88888826;
+					margin-top: 20px;
+					margin-right: 26px;
+					user-select: none;
+				}
+
+				&:not(.head) {
+					font-size: .9em;
+					transition: all .1s;
+
+					&:hover {
+						background: #7d7d7d14;
+					}
+				}
+
+				.check {
+					width: 16px;
+				}
+
+				.image {
+					width: 32px;
+					user-select: none;
+
+					>div {
+						width: 32px;
+						height: 32px;
+						border-radius: 2px;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: center;
+					}
+				}
+
+				.name {
+					flex: 3;
+				}
+
+				.artists {
+					flex: 3;
+				}
+
+				.albums {
+					flex: 2;
+				}
+
+				.duration {
+					width: 80px;
+				}
+
+				.types {
+					flex: 4;
+				}
+			}
+		}
+	}
+}

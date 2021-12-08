@@ -1,0 +1,76 @@
+#manage-music-page {
+
+	.manage-kind {
+		padding: 10px 0 0 40px;
+		flex: 1;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		.button-area {
+			>div {
+				margin-right: 10px;
+			}
+		}
+
+		.body {
+			margin-top: 20px;
+			padding-right: 20px;
+			flex: 1;
+			overflow: scroll;
+			user-select: none;
+
+			$borderColor: #8c8c8c69;
+
+			.kind-group {
+				display: flex;
+				padding: 20px 20px 10px 0;
+				// border-bottom: solid 1px $borderColor;
+
+				.kind-group-name {
+					width: 80px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+
+			.kind-list {
+				flex: 1;
+				overflow: hidden;
+				display: flex;
+				flex-wrap: wrap;
+
+				.kind-list-item {
+					padding: 6px 30px;
+					display: inline-block;
+					border: solid 1px #a2a2a259;
+					height: 28px;
+					margin: 0 15px 17px 0;
+					cursor: pointer;
+					position: relative;
+
+					.kind-name {
+						display: flex;
+						height: 100%;
+						align-items: center;
+					}
+
+					svg {
+						position: absolute;
+						right: -2px;
+						bottom: -2px;
+						font-size: 1.5em;
+						display: none;
+					}
+
+					&.selected {
+						svg {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

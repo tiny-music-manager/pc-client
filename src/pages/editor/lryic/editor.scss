@@ -1,0 +1,246 @@
+#root,
+.app-window,
+.appbody {
+	background-color: inherit;
+}
+
+.lyric-save-body {
+	>div {
+		display: flex;
+		padding: 10px 0;
+
+		>div:first-child {
+			width: 80px;
+
+			&::after {
+				content: ':';
+			}
+		}
+
+		input {
+			flex: 1;
+		}
+	}
+}
+
+#lyric-editor {
+	@keyframes avatar_rotate {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.appbody {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		position: relative;
+
+		>.title {
+			padding: 20px;
+			display: flex;
+			align-items: center;
+
+			.music-tab {
+				flex: 1;
+			}
+
+			.button {
+				margin-left: 10px;
+			}
+		}
+
+		>.body {
+			flex: 1;
+		}
+
+		.edit {
+			padding: 0 20px 5px 20px;
+			display: flex;
+			position: relative;
+
+			textarea {
+				flex: 1;
+				resize: none;
+			}
+		}
+
+		.make {
+			padding: 0 20px;
+			user-select: none;
+			overflow: hidden;
+			padding-top: 0;
+			scroll-behavior: smooth;
+
+			.lyric-line {
+				display: flex;
+				justify-content: center;
+				padding: 10px 0;
+				white-space: nowrap;
+				flex-wrap: wrap;
+
+				.lyric-word {
+					margin: 0 2px;
+					border: solid 1px #88888840;
+					padding: 2px 7px;
+					border-radius: 2px;
+					margin-bottom: 2px;
+				}
+			}
+		}
+
+		.tuning {
+			display: flex;
+			padding: 0 20px 5px 20px;
+			flex: 1;
+			position: relative;
+
+			textarea {
+				flex: 1;
+				resize: none;
+				white-space: nowrap;
+			}
+
+			svg {
+				font-size: .8em;
+				cursor: pointer;
+				padding: 10px;
+				border-radius: 50%;
+				min-width: auto;
+				position: absolute;
+				right: 25px;
+				bottom: 10px;
+				box-shadow: 2px 1px 11px #7c7c7c52;
+			}
+		}
+
+		.preview {
+			padding: 20px;
+			overflow: auto;
+			user-select: none;
+			scroll-behavior: smooth;
+			background-color: inherit;
+
+			.lyric-line {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 10px 0;
+				white-space: nowrap;
+				flex-wrap: wrap;
+				transition: font-size .5s;
+				background-color: inherit;
+				background-color: inherit;
+
+				&.lyric-current {
+					// font-size: 1.2em;
+					background-color: inherit;
+				}
+
+				.item {
+					position: relative;
+					white-space: break-spaces;
+					background-color: inherit;
+
+					>div {
+						display: flex;
+						align-items: center;
+						white-space: nowrap;
+						position: absolute;
+						left: 0;
+						top: 0;
+						bottom: 0;
+						width: 0;
+						overflow: hidden;
+						background-color: inherit;
+					}
+				}
+			}
+		}
+
+		.player {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 240px;
+			height: 60px;
+			background-color: inherit;
+			opacity: .9;
+			transition: opacity .2s;
+			border-radius: 3px;
+			overflow: hidden;
+
+			&:hover {
+				opacity: .7;
+			}
+
+			>div {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0 20px;
+				box-sizing: border-box;
+				background: #9898984d;
+			}
+
+			.avatar {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				cursor: pointer;
+				box-shadow: 0 0 4px 0px #7c7c7c61;
+
+				.image {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					position: absolute;
+					z-index: 0;
+					opacity: .5;
+
+					&.rotate {
+						animation: avatar_rotate linear 5s infinite;
+					}
+				}
+
+				.control {
+					z-index: 1;
+				}
+			}
+
+			.progress {
+				height: 1px;
+				background: #7c7c7c73;
+				flex: 1;
+				margin-left: 15px;
+
+				.current {
+					height: 100%;
+					position: relative;
+
+					>div.dot {
+						position: absolute;
+						content: " ";
+						width: 9px;
+						height: 9px;
+						border-radius: 50%;
+						top: -4px;
+						right: -4px;
+						box-shadow: 0 0 6px #74747491;
+						cursor: default;
+					}
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.checkbox {
+	display: flex;
+	width: 1em;
+	height: 1em;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2px;
+	border: solid 1px #a6a6a6a8;
+	color: transparent;
+	transition: all .1s;
+	cursor: pointer;
+
+	&.checked svg {
+		color: #fff;
+	}
+}

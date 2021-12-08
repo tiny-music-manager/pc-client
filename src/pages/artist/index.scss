@@ -1,0 +1,10 @@
+#artist-page {
+	display: flex;
+	flex-direction: column;
+
+	.music-group-container {
+		overflow: scroll;
+		margin-right: 0;
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,495 @@
+// 亮色模式
+[theme="light"] {
+	$back: #ffffff;
+	$front: #202020;
+
+	background-color: $back;
+	color: $front;
+
+	.popover>div {
+		background-color: $back;
+		color: $front;
+	}
+
+	.tmm-menu {
+		background-color: #fcfcfc;
+		box-shadow: 0px 6px 10px 4px #00000029;
+	}
+
+	.MainPage>.left {
+		background-color: #fafafa;
+	}
+
+	.MainPage>.left .group>div:first-child {
+		color: #757575;
+	}
+
+	.MainPage>.right>.title .search form {
+		input::placeholder {
+			color: #939393;
+		}
+	}
+
+	.app-window .appbar {
+		background-color: #fafafa;
+	}
+
+	#bottom-player {
+
+		.player-pop,
+		.play-list {
+			background: #fefefe;
+		}
+	}
+
+	#setting-page {
+		.setting-select .option-list {
+			background: $back;
+		}
+	}
+}
+
+// 深色模式
+[theme="dark"] {
+	$back: #2a2a2a;
+	$front: #ffffff;
+
+	background-color: $back;
+	color: $front;
+
+	.popover>div {
+		background-color: $back;
+		color: $front;
+	}
+
+	.tmm-menu {
+		background-color: #454545;
+		box-shadow: 2px 5px 20px 6px #00000040;
+	}
+
+	.MainPage>.left {
+		background-color: #212121;
+	}
+
+	.MainPage>.left .group>div:first-child {
+		color: #757575;
+	}
+
+	.MainPage>.right>.title .search form {
+		input::placeholder {
+			color: #c1c1c1;
+		}
+	}
+
+	.app-window .appbar {
+		background-color: transparent;
+	}
+
+	#bottom-player {
+
+		.player-pop,
+		.play-list {
+			background: #454545;
+		}
+	}
+
+	#setting-page {
+		.setting-select .option-list {
+			background: $back;
+		}
+	}
+}
+
+@mixin theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white) {
+
+	//输入框
+	input.input,
+	textarea.input {
+		border: solid 1px $light2;
+
+		&:focus {
+			border: solid 1px $dark2;
+		}
+	}
+
+	//按钮
+	.button {
+		color: $white;
+		background-image: linear-gradient(to right, $primary, $dark2);
+
+		&:not(.disabled):hover {
+			background-image: linear-gradient(to right, $dark1, $dark3);
+		}
+	}
+
+	//复选框
+	.checkbox.checked {
+		background-color: $primary;
+		border-color: $primary;
+	}
+
+	//错误提示
+	.errtip {
+		color: $error;
+	}
+
+	//链接
+	.link {
+		&:not(.black) {
+			color: $primary !important;
+		}
+
+		&:hover {
+			color: $dark2 !important;
+		}
+	}
+
+	//loading
+	.comp-loading {
+		color: $primary;
+	}
+
+	//方框选择打钩
+	.rect-selector.selected {
+		border-color: $primary !important;
+
+		svg {
+			color: $primary !important;
+		}
+	}
+
+	//弹出框
+	.popover {
+		.dialog>.dialog-body {
+			.replace-info .singer-item:not(.current).active {
+				border-color: $primary;
+			}
+		}
+	}
+
+	//播放中动态图标
+	.playing-icon {
+		>span {
+			background-color: $primary;
+		}
+	}
+
+	//左侧选中
+	.MainPage>.left .group>div:last-child>div.actived {
+		background-image: linear-gradient(to right, $primary, $dark2);
+		color: $white;
+	}
+
+	//右侧导航
+	.MainPage>.right>.title .navigate:not(.disabled):hover {
+		color: $primary;
+	}
+
+	//过滤器
+	.tmm-filter>div {
+
+		&:first-child {
+			border: solid 1px $primary;
+
+			&.active {
+				color: $white;
+				background: $primary;
+			}
+
+			&:hover:not(.active) {
+				color: $primary;
+			}
+		}
+
+		&:not(:first-child) {
+			&.active {
+				background: $primary;
+				color: $white;
+			}
+
+			&:hover:not(.active) {
+				color: $primary;
+			}
+		}
+	}
+
+	//TAB控件
+	.music-tab .music-tab-item.active {
+		.music-tab-title {
+			color: $primary;
+		}
+
+		.music-tab-active {
+			background: $primary;
+		}
+	}
+
+	//音乐管理界面
+	#manage-music-page {
+		.manage-upload {
+			.content .music-line .btns svg:hover {
+				color: $primary;
+			}
+
+			.content .music-line .kind span {
+				&:hover {
+					color: $primary;
+				}
+			}
+
+			.warn-color {
+				color: $warn;
+			}
+		}
+
+		.manage-kind {
+			.body .kind-list .kind-list-item.selected {
+				border-color: $primary;
+			}
+
+			.body .kind-list .kind-list-item svg {
+				color: $primary;
+			}
+		}
+	}
+
+	//应用窗口
+	.app-window {
+
+		//音乐扫描界面
+		&#music-scan {
+			.resolver {
+				.groupItem .group-container .music-img.active {
+					border-color: $primary;
+				}
+
+				.groupItem .singer-container.selected {
+					border-color: $primary;
+				}
+			}
+
+		}
+
+		&#lyric-manager .appbody {
+			.lyric-list .lyric-line .done {
+				color: $primary;
+			}
+		}
+
+		&#lyric-editor {
+
+			.make .lyric-line .lyric-word.done {
+				color: $primary;
+				border-color: $primary;
+			}
+
+			.preview .lyric-line .item>div,
+			.preview .lyric-played {
+				color: $primary;
+			}
+
+			.player .progress .current,
+			.player .progress .current>div.dot {
+				background-color: $primary;
+			}
+		}
+
+		&#album-editor .editor-item .input-area .artist-item {
+			border-color: $light1;
+
+			.delete svg:hover {
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+
+	//底部播放器
+	#bottom-player {
+
+		.progress .played,
+		.progress .dot,
+		.volumn-pop .rail,
+		.volumn-pop .rail .dot {
+			background-color: $primary;
+		}
+
+		.dlyric-show {
+			color: $primary;
+		}
+
+		.play-controls {
+			.play-pause {
+				background-color: $primary;
+			}
+
+			>svg:hover {
+				color: $primary;
+			}
+		}
+
+
+		.play-list>.list>div.playing {
+			color: $primary;
+		}
+
+
+		.music-lyric .lyric-line .item>div,
+		.music-lyric .lyric-played {
+			color: $dark1;
+		}
+	}
+
+	//设置
+	#setting-page {
+		.setting-checkbox-radio.checked .checkbox-radio-icon {
+			color: $primary;
+		}
+
+		.setting-select .option-list>div.selected,
+		.setting-select .option-list>div:hover {
+			background: $primary;
+			color: $white;
+		}
+
+		.syscolor-selector .color-item.selected {
+			border-color: $primary;
+		}
+	}
+}
+
+[color="green"] {
+	$primary: #4caf50;
+	$dark1: #43a047;
+	$dark2: #388e3c;
+	$dark3: #2e7d32;
+	$dark4: #1b5e20;
+	$light1: #66bb6a;
+	$light2: #81c784;
+	$light3: #a5d6a7;
+	$light4: #a5d6a7;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}
+
+[color="red"] {
+	$primary: #f44336;
+	$dark1: #e53935;
+	$dark2: #d32f2f;
+	$dark3: #c62828;
+	$dark4: #b71c1c;
+	$light1: #ef5350;
+	$light2: #e57373;
+	$light3: #ef9a9a;
+	$light4: #ffcdd2;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}
+
+[color="blue"] {
+	$primary: #2196f3;
+	$dark1: #1e88e5;
+	$dark2: #1976d2;
+	$dark3: #1565c0;
+	$dark4: #0d47a1;
+	$light1: #42a5f5;
+	$light2: #64b5f6;
+	$light3: #90caf9;
+	$light4: #bbdefb;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}
+
+[color="purple"] {
+	$primary: #9c27b0;
+	$dark1: #8e24aa;
+	$dark2: #7b1fa2;
+	$dark3: #6a1b9a;
+	$dark4: #4a148c;
+	$light1: #ab47bc;
+	$light2: #ba68c8;
+	$light3: #ce93d8;
+	$light4: #e1bee7;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}
+
+[color="magenta"] {
+	$primary: #e91e63;
+	$dark1: #d81b60;
+	$dark2: #c2185b;
+	$dark3: #ad1457;
+	$dark4: #880e4f;
+	$light1: #ec407a;
+	$light2: #f06292;
+	$light3: #f48fb1;
+	$light4: #f8bbd0;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}
+
+[color="darkblue"] {
+	$primary: #3f51b5;
+	$dark1: #3949ab;
+	$dark2: #303f9f;
+	$dark3: #283593;
+	$dark4: #1a237e;
+	$light1: #5c6bc0;
+	$light2: #7986cb;
+	$light3: #9fa8da;
+	$light4: #c5cae9;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}
+
+[color="orange"] {
+	$primary: #ff9800;
+	$dark1: #fb8c00;
+	$dark2: #f57c00;
+	$dark3: #ef6c00;
+	$dark4: #e65100;
+	$light1: #ffa726;
+	$light2: #ffb74d;
+	$light3: #ffcc80;
+	$light4: #ffe0b2;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}
+
+[color="brown"] {
+	$primary: #795548;
+	$dark1: #6d4c41;
+	$dark2: #5d4037;
+	$dark3: #4e342e;
+	$dark4: #3e2723;
+	$light1: #8d6e63;
+	$light2: #a1887f;
+	$light3: #bcaaa4;
+	$light4: #d7ccc8;
+	$error: #e91e63;
+	$warn: #ffab91;
+	$white: #ffffff;
+
+	@include theme-style($primary, $dark1, $dark2, $dark3, $dark4, $light1, $light2, $light3, $light4, $error, $warn, $white);
+}

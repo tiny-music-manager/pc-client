@@ -1,0 +1,115 @@
+#music-editor {
+
+	.appbody {
+		padding: 20px;
+
+		&.loading{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		.editor-item {
+			display: flex;
+			padding: 10px 0;
+
+			.choose-btn {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+				cursor: pointer;
+				user-select: none;
+			}
+
+			.artist-album {
+				display: inline-flex;
+				align-items: center;
+				border: solid 1px #8080802b;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				padding: 5px 15px;
+				border-radius: 3px;
+				user-select: none;
+
+				.avatar {
+					width: 32px;
+					height: 32px;
+					border-radius: 50%;
+					margin-right: 5px;
+					box-shadow: 0 0 3px #76767636;
+				}
+
+				.delete {
+					display: flex;
+					width: 18px;
+					height: 18px;
+					background: #8d8d8d2e;
+					align-items: center;
+					justify-content: center;
+					margin-left: 10px;
+					border-radius: 50%;
+					cursor: pointer;
+					transition: all .3s;
+					padding: 3px;
+					box-sizing: border-box;
+
+					&:hover {
+						background: #8d8d8dc2;
+					}
+				}
+			}
+
+			.image {
+				width: 64px;
+				height: 64px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				cursor: pointer;
+				background-color: #95959538;
+			}
+
+			.input-area {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+
+				textarea {
+					width: 100%;
+					height: 120px;
+					resize: none;
+				}
+			}
+
+			.label {
+				width: 90px;
+				user-select: none;
+
+				&::after {
+					content: ':';
+				}
+			}
+
+			.error {
+				font-size: .8em;
+				margin-left: 20px;
+			}
+
+			.kind-name {
+				margin-bottom: 10px;
+				margin-right: 10px;
+				border: solid 1px #73737329;
+				height: 26px;
+				display: inline-flex;
+				align-items: center;
+				padding: 0 10px;
+				user-select: none;
+				border-radius: 2px;
+				font-size: .9em;
+			}
+		}
+
+	}
+}

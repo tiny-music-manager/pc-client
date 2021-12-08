@@ -1,0 +1,92 @@
+#album-editor {
+
+	.appbody {
+		padding: 20px;
+
+		.editor-item {
+			display: flex;
+			padding: 10px 0;
+
+			.pic {
+				width: 64px;
+				height: 64px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				cursor: pointer;
+				background-color: #95959538;
+			}
+
+			.input-area {
+				flex: 1;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+
+				textarea {
+					width: 100%;
+					height: 120px;
+					resize: none;
+				}
+
+				.artist-item {
+					display: flex;
+					align-items: center;
+					border: solid 1px #86868638;
+					padding: 0 10px;
+					height: 32px;
+					border-radius: 3px;
+					user-select: none;
+					margin: 0 20px 10px 0;
+
+					.avatar {
+						width: 24px;
+						height: 24px;
+						border-radius: 12px;
+					}
+
+					>div {
+						display: flex;
+						align-items: center;
+					}
+
+					.name {
+						margin: 0 5px;
+					}
+
+					.delete svg {
+						cursor: pointer;
+						border-radius: 50%;
+						padding: 2px;
+						background-color: #80808026;
+						transition: all .2s;
+						font-size: .8em;
+					}
+				}
+
+				.singer-join {
+					margin: 0 20px 10px 0;
+					display: flex;
+					align-items: center;
+					cursor: pointer;
+					user-select: none;
+					transition: all .2s;
+				}
+			}
+
+			.label {
+				width: 90px;
+				user-select: none;
+
+				&::after {
+					content: ':';
+				}
+			}
+
+			.error {
+				font-size: .8em;
+				margin-left: 20px;
+			}
+		}
+	}
+}

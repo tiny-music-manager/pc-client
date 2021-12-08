@@ -1,0 +1,98 @@
+#manage-music-page {
+
+	.manage-artist {
+		padding: 10px 0 0 40px;
+		flex: 1;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		.body {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+
+			.singer-container {
+				overflow: scroll;
+				flex: 1;
+			}
+
+			.singer-line {
+				display: flex;
+				padding: 5px 10px;
+				cursor: default;
+				margin-right: 20px;
+
+				.text {
+					width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+				>div {
+					display: flex;
+					align-items: center;
+					overflow: hidden;
+					padding-right: 10px;
+				}
+
+				&.head {
+					background: #88888826;
+					margin-top: 20px;
+					user-select: none;
+				}
+
+				&:not(.head) {
+					font-size: .9em;
+					transition: all .1s;
+
+					&:hover {
+						background: #7d7d7d14;
+					}
+				}
+
+				.check {
+					width: 16px;
+				}
+
+				.avatar {
+					width: 32px;
+					user-select: none;
+
+					>div {
+						width: 32px;
+						height: 32px;
+						border-radius: 16px;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: center;
+					}
+				}
+
+				.name {
+					flex: 3;
+				}
+
+				.fname {
+					flex: 3;
+				}
+
+				.counts {
+					width: 80px;
+				}
+
+				.birthday {
+					width: 100px;
+				}
+
+				.desc {
+					flex: 6;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+

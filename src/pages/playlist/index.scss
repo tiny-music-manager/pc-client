@@ -1,0 +1,13 @@
+.playlist-page {
+	display: flex;
+	flex-direction: column;
+
+	.list-empty{
+		flex-direction: column;
+		user-select: none;
+
+		.delete-btn{
+			margin-top: 20px;
+		}
+	}
+}

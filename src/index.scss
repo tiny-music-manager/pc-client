@@ -1,0 +1,78 @@
+@import "./styles/common.scss";
+@import "./styles/theme.scss";
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .5s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//拖拽区域
+.MainPage>.right>.title .flexed,
+#bottom-player .fullscreen-view>.main .title .flex {
+  -webkit-app-region: drag;
+}
+
+
+svg {
+  fill: currentColor;
+  width: 1em !important;
+  height: 1em !important;
+}
+
+// placeholder禁止选择
+*::placeholder {
+  user-select: none;
+}
+
+
+//滚动条
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+
+// ::-webkit-scrollbar-thumb {
+//  border-radius: 3px;
+// }
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+[theme="light"] {
+  ::-webkit-scrollbar-thumb {
+    background: #acacac80;
+  }
+}
+
+[theme="dark"] {
+  ::-webkit-scrollbar-thumb {
+    background: #bdbdbd91;
+  }
+}
+
+
+#root,
+#root .MainPage,
+#root .MainPage .right,
+#root .MainPage .right #bottom-player,
+#root .MainPage .right #bottom-player .fullscreen-view,
+#root .MainPage .right #bottom-player .fullscreen-view .main,
+#root .MainPage .right #bottom-player .fullscreen-view .main .music-lyric,
+#root .MainPage .right #bottom-player .fullscreen-view .main .music-lyric .right,
+#root .MainPage .right #bottom-player .fullscreen-view .main .music-lyric .right .lyric-line,
+#root .MainPage .right #bottom-player .fullscreen-view .main .music-lyric .right .lyric-line .item,
+#root .MainPage .right #bottom-player .fullscreen-view .main .music-lyric .right .lyric-line .item div {
+  background-color: inherit;
+}

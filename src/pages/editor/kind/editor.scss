@@ -1,0 +1,56 @@
+#kind-editor {
+	.appbody {
+		padding: 20px;
+
+		.editor-item {
+			display: flex;
+			padding: 10px 0;
+
+			.type-item {
+				display: inline-block;
+				padding: 5px 15px;
+				border: solid 1px #7b7b7b59;
+				margin-right: 5px;
+				margin-bottom: 5px;
+				cursor: pointer;
+				position: relative;
+				user-select: none;
+
+				>svg {
+					position: absolute;
+					right: -2px;
+					bottom: -2px;
+					font-size: 1.5em;
+				}
+
+				&:not(.selected)>svg {
+					display: none;
+				}
+			}
+
+			.input-area {
+				flex: 1;
+
+				textarea {
+					width: 100%;
+					height: 80px;
+					resize: none;
+				}
+			}
+
+			.label {
+				width: 70px;
+				user-select: none;
+
+				&::after {
+					content: ':';
+				}
+			}
+
+			.error {
+				font-size: .8em;
+			}
+		}
+
+	}
+}
