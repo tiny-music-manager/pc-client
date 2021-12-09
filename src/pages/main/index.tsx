@@ -41,7 +41,7 @@ export class MainPage extends React.Component<{}, IMainPageState> {
 			console.log('对话框')
 		}
 		//对话框
-		if (pathname.match(/^\/discover/)) {
+		else if (pathname.match(/^\/discover/)) {
 			console.log('网络发现')
 		}
 		//桌面歌词
@@ -72,12 +72,16 @@ export class MainPage extends React.Component<{}, IMainPageState> {
 		this.historyUnlisten?.()
 	}
 
+	private initialing = false
 	private async initial() {
+		this.initialing = true
 		await new Promise(resolve => setTimeout(resolve, 100))
 		while (true) {
 			const res = await apis.sys.initial.list({})
 			if (res) break
+			alert('ffffffffffff  ' + window.location.href)
 			await SystemInitialDialog.open({})
+			break
 		}
 		let resolved = false
 		return new Promise<void>(async (resolve, reject) => {

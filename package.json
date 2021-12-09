@@ -1,5 +1,5 @@
 {
-  "name": "tiny-music-manager",
+  "name": "tmm",
   "main": "index.js",
   "version": "0.1.0",
   "author": {
@@ -49,7 +49,17 @@
     },
     "linux": {
       "category": "Audio",
-      "icon":"res/logo/linux",
+      "icon": "res/logo/linux",
+      "desktop": {
+        "Name": "Music Manager",
+        "Name[zh_CN]": "音乐管理器",
+        "Name[zh_HK]": "音樂管理器",
+        "Name[zh_TW]": "音樂管理器",
+        "Comment": "Tiny Music Manager",
+        "Comment[zh_CN]": "个人音乐管理工具",
+        "Comment[zh_HK]": "個人音樂管理工具",
+        "Comment[zh_TW]": "個人音樂管理工具"
+      },
       "target": [
         "deb",
         "rpm",
@@ -107,7 +117,6 @@
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.0",
     "babel-loader": "8.1.0",
     "babel-plugin-named-asset-import": "^0.3.7",
     "babel-preset-react-app": "^10.0.0",
@@ -121,7 +130,6 @@
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -133,10 +141,6 @@
     "html-webpack-plugin": "4.5.0",
     "iconv-lite": "^0.6.3",
     "identity-obj-proxy": "3.0.0",
-    "jest": "26.6.0",
-    "jest-circus": "26.6.0",
-    "jest-resolve": "26.6.0",
-    "jest-watch-typeahead": "0.6.1",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
     "sass": "^1.42.1",
@@ -169,56 +173,6 @@
     "react-dom": "^17.0.2",
     "react-refresh": "^0.8.3",
     "react-router-dom": "^5.3.0"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "testRunner": "/home/yizhi/develop/nodejs/tiny-music-manager/node_modules/jest-circus/runner.js",
-    "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ],
-    "resetMocks": true
   },
   "babel": {
     "presets": [
